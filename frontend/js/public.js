@@ -138,3 +138,20 @@ renderCourseDetail();
 renderMastersPage();
 renderEventsPage();
 renderCalendarPage();
+
+document.querySelectorAll('.faq-btn').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const parent = btn.closest('.faq-item');
+    const isOpen = parent.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach((item) => {
+      item.classList.remove('open');
+      const sign = item.querySelector('.faq-btn span');
+      if (sign) sign.textContent = '+';
+    });
+    if (!isOpen) {
+      parent.classList.add('open');
+      const currentSign = btn.querySelector('span');
+      if (currentSign) currentSign.textContent = '−';
+    }
+  });
+});

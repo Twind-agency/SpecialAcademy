@@ -3,53 +3,161 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Special Academy | Home</title>
+    <title>Special Academy | Formazione Grooming</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
+    <header class="site-header">
       <div class="container nav">
-        <a class="brand" href="index.html">Special<em>Academy</em></a>
+        <a class="brand" href="index.html"><span class="brand-badge">Special</span><span class="brand-accent">Academy</span></a>
         <nav class="nav-links">
           <a href="index.html">Home</a>
           <a href="corsi.html">Corsi</a>
           <a href="maestri.html">Maestri</a>
           <a href="eventi.html">Eventi</a>
           <a href="calendario.html">Calendario</a>
-          <a href="admin.html">Backend Admin</a>
         </nav>
+        <a class="nav-cta" href="admin.html">Area Admin</a>
       </div>
     </header>
 
     <main class="container">
-      <section class="bento-grid">
-        <article class="tile hero">
-          <span class="tag">Accademia Toelettatura</span>
-          <h1>Piattaforma completa per corsi, maestri, eventi live e gestione professionale.</h1>
-          <p>Frontend moderno in stile bento, backend separato con gestione amministratori, permessi avanzati, CRM contatti e calendario operativo.</p>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;">
-            <a class="btn" href="corsi.html">Esplora corsi</a>
-            <a class="btn btn-outline" href="admin.html">Accesso admin</a>
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <span class="tag">Accademia professionale di toelettatura</span>
+            <h1>Forma il tuo futuro nel grooming con percorsi pratici e live coaching.</h1>
+            <p class="lead">
+              Programmi strutturati, maestri certificati e una piattaforma completa per corsi, eventi, calendario e
+              richieste informazioni. Pensata per chi vuole lavorare in modo professionale nel settore pet care.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="corsi.html">Scopri i corsi</a>
+              <a class="btn btn-secondary" href="calendario.html">Vedi calendario</a>
+            </div>
+            <div class="hero-trust">
+              <div class="logo-pill">Partner: PetCare Group</div>
+              <div class="logo-pill">Certificazione SPA</div>
+              <div class="logo-pill">+1.200 allievi</div>
+              <div class="logo-pill">98% soddisfazione</div>
+            </div>
           </div>
-        </article>
-        <aside class="quick">
-          <div class="tile-mini"><strong>Focus didattico</strong><p>Teoria + pratica in salone.</p></div>
-          <div class="tile-mini"><strong>Live coaching</strong><p>Eventi in presenza e streaming.</p></div>
-          <div class="tile-mini"><strong>CRM contatti</strong><p>Tag automatici e segmentazione lead.</p></div>
-        </aside>
+
+          <div class="visual-grid">
+            <article class="visual-card"><img src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?auto=format&fit=crop&w=1000&q=80" alt="Toelettatura cane" /></article>
+            <article class="visual-card"><img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1000&q=80" alt="Strumenti grooming" /></article>
+            <article class="visual-card stat">
+              <h3>230+</h3>
+              <p>ore di pratica nei percorsi master</p>
+            </article>
+            <article class="visual-card"><img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1000&q=80" alt="Lezione in accademia" /></article>
+          </div>
+        </div>
       </section>
 
-      <h2 class="section-title">Corsi in evidenza</h2>
-      <section id="home-courses" class="cards-3"></section>
+      <section class="section">
+        <div class="section-head">
+          <h2>Un'accademia costruita per il lavoro reale</h2>
+          <p>Metodo pratico, supporto business e attenzione al benessere animale.</p>
+        </div>
+        <div class="cards-2">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1583512603806-077998240c7a?auto=format&fit=crop&w=1200&q=80" alt="Risultati studenti" />
+            <div class="card-content">
+              <h3>920+ studenti formati</h3>
+              <p>percorsi completati con moduli tecnici e coaching post-corso.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Team academy" />
+            <div class="card-content">
+              <h3>Come lavoriamo</h3>
+              <p>Teoria breve, molta pratica, casi reali e strumenti per gestire il salone.</p>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <h2 class="section-title">Maestri e coach</h2>
-      <section id="home-masters" class="cards-4"></section>
+      <section class="dark-panel">
+        <h2>Percorsi ed esempi reali: risultati concreti per la tua carriera</h2>
+        <p>Seleziona l'area che ti interessa e scopri i corsi in evidenza.</p>
+        <div class="pill-row">
+          <span class="pill">All courses</span>
+          <span class="pill">Base grooming</span>
+          <span class="pill">Feline care</span>
+          <span class="pill">Business salone</span>
+        </div>
+        <div id="home-courses" class="cards-3"></div>
+      </section>
 
-      <h2 class="section-title">Prossimi eventi live</h2>
-      <section id="home-events" class="cards-3"></section>
+      <section class="section">
+        <div class="section-head">
+          <h2>Maestri e coach</h2>
+          <p>Professionisti con esperienza di campo e approccio didattico orientato ai risultati.</p>
+        </div>
+        <div id="home-masters" class="cards-4"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Prossimi eventi live</h2>
+          <p>Workshop, demo tecniche e sessioni Q&A per aggiornarti costantemente.</p>
+        </div>
+        <div id="home-events" class="cards-3"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>FAQ principali</h2>
+          <p>Risposte rapide alle domande più frequenti.</p>
+        </div>
+        <div class="faq-item open">
+          <button class="faq-btn">I corsi rilasciano attestato? <span>−</span></button>
+          <div class="faq-content">Sì, tutti i percorsi completati prevedono attestato Academy e valutazione competenze.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Posso seguire se lavoro già in salone? <span>+</span></button>
+          <div class="faq-content">Sì, i moduli sono organizzati con slot serali/weekend e sessioni registrate quando disponibili.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">È previsto supporto post-corso? <span>+</span></button>
+          <div class="faq-content">Sì, includiamo incontri di mentoring e confronto operativo sui casi reali.</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Cosa dicono i nostri studenti</h2>
+          <p>Feedback reali da percorsi completati.</p>
+        </div>
+        <div class="cards-3">
+          <article class="testimonial">
+            <p>“Percorso pratico e utile da subito: ho migliorato qualità e tempi in salone.”</p>
+            <strong>Federica M. • Groomer</strong>
+          </article>
+          <article class="testimonial">
+            <p>“La parte business mi ha aiutato a gestire pricing, agenda e fidelizzazione clienti.”</p>
+            <strong>Luca R. • Titolare salone</strong>
+          </article>
+          <article class="testimonial">
+            <p>“Coach presenti e disponibili, soprattutto sui moduli di gestione animali sensibili.”</p>
+            <strong>Giulia B. • Pet stylist</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div>
+          <h2>Pronto a costruire la tua carriera nella toelettatura?</h2>
+          <p>Inizia oggi con il percorso più adatto al tuo livello.</p>
+        </div>
+        <a class="btn btn-accent" href="corsi.html">Inizia ora</a>
+      </section>
     </main>
 
-    <footer class="footer container">© 2026 Special Academy • Palette: bianco, nero, #0ABABA</footer>
+    <footer class="footer">
+      <div class="container">© 2026 Special Academy • Formazione grooming professionale</div>
+    </footer>
 
     <script src="js/api.js"></script>
     <script src="js/public.js"></script>

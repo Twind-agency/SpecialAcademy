@@ -1,9 +1,43 @@
 <!doctype html>
 <html lang="it">
-<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Calendario</title><link rel="stylesheet" href="css/styles.css" /></head>
-<body>
-<header><div class="container nav"><a class="brand" href="index.html">Special<em>Academy</em></a><nav class="nav-links"><a href="index.html">Home</a><a href="corsi.html">Corsi</a><a href="maestri.html">Maestri</a><a href="eventi.html">Eventi</a><a href="calendario.html">Calendario</a><a href="admin.html">Backend Admin</a></nav></div></header>
-<main class="container"><h1>Calendario corsi + eventi</h1><div class="table-wrap"><table><thead><tr><th>Tipo</th><th>Titolo</th><th>Data</th><th>Owner</th></tr></thead><tbody id="calendar-body"></tbody></table></div></main>
-<footer class="footer container">© 2026 Special Academy</footer>
-<script src="js/api.js"></script><script src="js/public.js"></script>
-</body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendario | Special Academy</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html"><span class="brand-badge">Special</span><span class="brand-accent">Academy</span></a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a><a href="corsi.html">Corsi</a><a href="maestri.html">Maestri</a><a href="eventi.html">Eventi</a><a href="calendario.html">Calendario</a>
+        </nav>
+        <a class="nav-cta" href="admin.html">Area Admin</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-hero">
+        <span class="tag">Planning Academy</span>
+        <h1>Calendario corsi + eventi</h1>
+        <p>Vista centralizzata per organizzare lezioni e appuntamenti live.</p>
+      </section>
+      <section class="section" style="margin-top:0;">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Tipo</th><th>Titolo</th><th>Data</th><th>Owner</th></tr>
+            </thead>
+            <tbody id="calendar-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="container">© 2026 Special Academy</div></footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/public.js"></script>
+  </body>
+</html>
