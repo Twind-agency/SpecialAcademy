@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Special Academy | Home</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <a class="brand" href="index.html">Special<em>Academy</em></a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="corsi.html">Corsi</a>
+          <a href="maestri.html">Maestri</a>
+          <a href="eventi.html">Eventi</a>
+          <a href="calendario.html">Calendario</a>
+          <a href="admin.html">Backend Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="bento-grid">
+        <article class="tile hero">
+          <span class="tag">Accademia Toelettatura</span>
+          <h1>Piattaforma completa per corsi, maestri, eventi live e gestione professionale.</h1>
+          <p>Frontend moderno in stile bento, backend separato con gestione amministratori, permessi avanzati, CRM contatti e calendario operativo.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a class="btn" href="corsi.html">Esplora corsi</a>
+            <a class="btn btn-outline" href="admin.html">Accesso admin</a>
+          </div>
+        </article>
+        <aside class="quick">
+          <div class="tile-mini"><strong>Focus didattico</strong><p>Teoria + pratica in salone.</p></div>
+          <div class="tile-mini"><strong>Live coaching</strong><p>Eventi in presenza e streaming.</p></div>
+          <div class="tile-mini"><strong>CRM contatti</strong><p>Tag automatici e segmentazione lead.</p></div>
+        </aside>
+      </section>
+
+      <h2 class="section-title">Corsi in evidenza</h2>
+      <section id="home-courses" class="cards-3"></section>
+
+      <h2 class="section-title">Maestri e coach</h2>
+      <section id="home-masters" class="cards-4"></section>
+
+      <h2 class="section-title">Prossimi eventi live</h2>
+      <section id="home-events" class="cards-3"></section>
+    </main>
+
+    <footer class="footer container">© 2026 Special Academy • Palette: bianco, nero, #0ABABA</footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/public.js"></script>
+  </body>
+</html>

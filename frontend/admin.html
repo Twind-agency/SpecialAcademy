@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend Admin | Special Academy</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <a class="brand" href="index.html">Special<em>Academy</em></a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="corsi.html">Corsi</a>
+          <a href="admin.html">Backend Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="tile" style="margin-bottom:14px;">
+        <h1>Accesso riservato admin</h1>
+        <p>Login con ruoli e livelli di permesso diversi.</p>
+        <form id="login-form" class="form-grid" style="max-width:420px;">
+          <input name="email" type="email" placeholder="Email admin" required />
+          <input name="password" type="password" placeholder="Password" required />
+          <button class="btn" type="submit">Accedi</button>
+        </form>
+        <div id="login-feedback"></div>
+        <p><strong>Credenziali demo:</strong> admin@specialacademy.local / Admin123! • manager@specialacademy.local / Manager123!</p>
+      </section>
+
+      <section id="admin-panel" style="display:none;">
+        <article class="tile" style="margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:10px;">
+          <div>
+            <h2>Pannello backend</h2>
+            <p>Connesso come <strong id="whoami"></strong></p>
+          </div>
+          <button class="btn btn-outline" id="logout-btn">Logout</button>
+        </article>
+
+        <div id="admin-feedback"></div>
+
+        <h2 class="section-title">Creazione rapida record</h2>
+        <section class="cards-3">
+          <form class="tile quick-create form-grid" data-resource="courses">
+            <h3>Nuovo corso</h3>
+            <input name="title" placeholder="Titolo" required />
+            <input name="level" placeholder="Livello" required />
+            <input name="duration" placeholder="Durata" required />
+            <input name="format" placeholder="Formato" required />
+            <input name="description" placeholder="Descrizione" required />
+            <input name="coachId" placeholder="ID maestro" required />
+            <input name="image" placeholder="URL immagine" required />
+            <button class="btn" type="submit">Salva corso</button>
+          </form>
+
+          <form class="tile quick-create form-grid" data-resource="masters">
+            <h3>Nuovo maestro</h3>
+            <input name="name" placeholder="Nome" required />
+            <input name="role" placeholder="Ruolo" required />
+            <input name="bio" placeholder="Bio" required />
+            <input name="photo" placeholder="URL foto" required />
+            <button class="btn" type="submit">Salva maestro</button>
+          </form>
+
+          <form class="tile quick-create form-grid" data-resource="events">
+            <h3>Nuovo evento</h3>
+            <input name="title" placeholder="Titolo" required />
+            <input name="date" type="date" required />
+            <input name="location" placeholder="Luogo" required />
+            <input name="description" placeholder="Descrizione" required />
+            <input name="image" placeholder="URL immagine" required />
+            <button class="btn" type="submit">Salva evento</button>
+          </form>
+        </section>
+
+        <section class="cards-3" style="margin-top:14px;">
+          <form class="tile quick-create form-grid" data-resource="calendar">
+            <h3>Nuova voce calendario</h3>
+            <input name="type" placeholder="corso/evento" required />
+            <input name="title" placeholder="Titolo" required />
+            <input name="date" type="date" required />
+            <input name="time" type="time" required />
+            <input name="owner" placeholder="Owner" required />
+            <button class="btn" type="submit">Salva calendario</button>
+          </form>
+
+          <form class="tile quick-create form-grid" data-resource="genericRequests">
+            <h3>Nuova richiesta generica</h3>
+            <input name="subject" placeholder="Oggetto" required />
+            <input name="description" placeholder="Descrizione" required />
+            <select name="status"><option>aperta</option><option>in-lavorazione</option><option>chiusa</option></select>
+            <button class="btn" type="submit">Salva richiesta</button>
+          </form>
+
+          <form class="tile quick-create form-grid" data-resource="admins">
+            <h3>Nuovo admin</h3>
+            <input name="name" placeholder="Nome" required />
+            <input name="email" type="email" placeholder="Email" required />
+            <input name="password" type="password" placeholder="Password" required />
+            <select name="level"><option value="editor">editor</option><option value="manager">manager</option></select>
+            <textarea name="permissions" placeholder="Permessi separati da virgola"></textarea>
+            <button class="btn" type="submit">Crea admin</button>
+          </form>
+        </section>
+
+        <h2 class="section-title">Tabelle backend</h2>
+        <section class="tile"><h3>Corsi</h3><div class="table-wrap"><table><thead><tr><th>Titolo</th><th>Livello</th><th>Durata</th></tr></thead><tbody id="table-courses"></tbody></table></div></section>
+        <section class="tile"><h3>Maestri</h3><div class="table-wrap"><table><thead><tr><th>Nome</th><th>Ruolo</th></tr></thead><tbody id="table-masters"></tbody></table></div></section>
+        <section class="tile"><h3>Eventi</h3><div class="table-wrap"><table><thead><tr><th>Titolo</th><th>Data</th><th>Luogo</th></tr></thead><tbody id="table-events"></tbody></table></div></section>
+        <section class="tile"><h3>Contatti (con categorie + tag)</h3><div class="table-wrap"><table><thead><tr><th>Nome</th><th>Email</th><th>Categoria</th><th>Tag</th><th>Status</th></tr></thead><tbody id="table-contacts"></tbody></table></div></section>
+        <section class="tile"><h3>Calendario</h3><div class="table-wrap"><table><thead><tr><th>Tipo</th><th>Titolo</th><th>Data</th><th>Ora</th></tr></thead><tbody id="table-calendar"></tbody></table></div></section>
+        <section class="tile"><h3>Richieste generiche</h3><div class="table-wrap"><table><thead><tr><th>Oggetto</th><th>Status</th></tr></thead><tbody id="table-requests"></tbody></table></div></section>
+        <section class="tile"><h3>Admin</h3><div class="table-wrap"><table><thead><tr><th>Nome</th><th>Email</th><th>Livello</th></tr></thead><tbody id="table-admins"></tbody></table></div></section>
+        <section class="tile"><h3>Lista email contatti</h3><p id="email-list"></p></section>
+      </section>
+    </main>
+
+    <footer class="footer container">Backend separato con RBAC, gestione entità e CRM contatti.</footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

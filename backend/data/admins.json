@@ -1,0 +1,35 @@
+[
+  {
+    "id": "a-super-1",
+    "name": "Super Admin",
+    "email": "admin@specialacademy.local",
+    "passwordHash": "e4adeb2d53c6b2e3f793802b2c6963b3$b0c2aaa16eb9c2d1392b3fe8e958a253f1e92f49c0d305b7dae4154fc7e35350",
+    "level": "superadmin",
+    "permissions": [
+      "manage_admins",
+      "manage_courses",
+      "manage_masters",
+      "manage_events",
+      "manage_contacts",
+      "manage_calendar",
+      "manage_requests",
+      "send_contact_emails"
+    ]
+  },
+  {
+    "id": "a-manager-1",
+    "name": "Operations Manager",
+    "email": "manager@specialacademy.local",
+    "passwordHash": "34ed20e644bbd7c2566cbfe84a3b0ea2$afdf38bdee6b29fac8e90d69b251486b77b0ac05ddd46ca49b4ae9b45417b6c9",
+    "level": "manager",
+    "permissions": [
+      "manage_courses",
+      "manage_masters",
+      "manage_events",
+      "manage_contacts",
+      "manage_calendar",
+      "manage_requests",
+      "send_contact_emails"
+    ]
+  }
+]

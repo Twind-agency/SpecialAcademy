@@ -1,0 +1,101 @@
+{
+  "courses": [
+    {
+      "id": "c-base-grooming",
+      "title": "Corso Base Grooming Professionale",
+      "level": "Base",
+      "duration": "8 settimane",
+      "format": "Presenza + Laboratorio",
+      "description": "Fondamenti di toelettatura, sicurezza animale, strumenti e relazione col cliente.",
+      "coachId": "m-elena",
+      "calendarSlots": [
+        "Lunedì 18:00 - 21:00",
+        "Sabato 09:00 - 13:00"
+      ],
+      "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": "c-feline-care",
+      "title": "Specializzazione Toelettatura Felina",
+      "level": "Intermedio",
+      "duration": "4 settimane",
+      "format": "Live online + pratica guidata",
+      "description": "Gestione stress, handling sicuro e tecniche specifiche per il gatto.",
+      "coachId": "m-marco",
+      "calendarSlots": [
+        "Martedì 19:00 - 22:00"
+      ],
+      "image": "https://images.unsplash.com/photo-1511044568932-338cba0ad803?auto=format&fit=crop&w=1200&q=80"
+    }
+  ],
+  "masters": [
+    {
+      "id": "m-elena",
+      "name": "Elena Rinaldi",
+      "role": "Head Coach",
+      "bio": "15 anni di esperienza in saloni premium e percorsi formativi certificati.",
+      "photo": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "m-marco",
+      "name": "Marco Vitale",
+      "role": "Feline Specialist",
+      "bio": "Esperto in gestione low-stress e benessere animale in contesti grooming.",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "events": [
+    {
+      "id": "e-open-day",
+      "title": "Open Day Academy",
+      "date": "2026-05-10",
+      "location": "Milano + Streaming",
+      "description": "Presentazione percorsi, demo live e Q&A con i coach.",
+      "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80"
+    }
+  ],
+  "calendar": [
+    {
+      "id": "cal-1",
+      "type": "corso",
+      "title": "Corso Base Grooming Professionale",
+      "date": "2026-05-05",
+      "time": "18:00",
+      "owner": "Elena Rinaldi"
+    },
+    {
+      "id": "cal-2",
+      "type": "evento",
+      "title": "Open Day Academy",
+      "date": "2026-05-10",
+      "time": "10:00",
+      "owner": "Team Academy"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "ct-1",
+      "name": "Giulia Test",
+      "email": "giulia@example.com",
+      "phone": "+39 333 1111111",
+      "message": "Vorrei info sul corso base",
+      "category": "informazioni-corso",
+      "tags": [
+        "lead",
+        "corso"
+      ],
+      "source": "landing-home",
+      "status": "nuovo",
+      "createdAt": "2026-04-01T10:00:00.000Z"
+    }
+  ],
+  "genericRequests": [
+    {
+      "id": "rq-1",
+      "subject": "Richiesta partnership",
+      "description": "Collaborazione con negozio locale",
+      "status": "aperta",
+      "createdAt": "2026-04-02T08:00:00.000Z"
+    }
+  ]
+}
