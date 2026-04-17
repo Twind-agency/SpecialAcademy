@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Dashboard Backend | Special Academy</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html"><span class="brand-badge">Special</span><span class="brand-accent">Academy</span></a>
+        <nav class="nav-links"><a href="index.html">Home</a><a href="corsi.html">Corsi</a><a href="maestri.html">Maestri</a><a href="eventi.html">Eventi</a><a href="calendario.html">Calendario</a></nav>
+        <span class="nav-cta">Demo Backend</span>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-hero">
+        <span class="tag">Pagina esempio richiesta</span>
+        <h1>Come è strutturata la dashboard di gestione</h1>
+        <p>Questa è una demo visiva statica per capire l'organizzazione del backend anche senza login attivo.</p>
+      </section>
+
+      <section class="cards-4" style="margin-bottom:16px;">
+        <article class="card card-content"><h3>72</h3><p>Corsi attivi</p></article>
+        <article class="card card-content"><h3>14</h3><p>Maestri registrati</p></article>
+        <article class="card card-content"><h3>38</h3><p>Eventi live pianificati</p></article>
+        <article class="card card-content"><h3>418</h3><p>Contatti in CRM</p></article>
+      </section>
+
+      <section class="section" style="margin-top:0;">
+        <h2>Moduli backend</h2>
+        <div class="cards-3">
+          <article class="card card-content"><h3>Gestione corsi</h3><p>CRUD completo, livelli, immagini, descrizione, calendario dedicato.</p></article>
+          <article class="card card-content"><h3>Gestione maestri</h3><p>Schede coach con foto, bio estesa, specializzazioni e assegnazione corsi.</p></article>
+          <article class="card card-content"><h3>Gestione eventi</h3><p>Programmazione live, location, iscrizioni e promemoria.</p></article>
+          <article class="card card-content"><h3>CRM contatti</h3><p>Categorie richiesta + tag automatici/manuali + lista email.</p></article>
+          <article class="card card-content"><h3>Calendario</h3><p>Vista unificata corsi/eventi con owner e stato.</p></article>
+          <article class="card card-content"><h3>Richieste generiche</h3><p>Pipeline operativa: aperta, in lavorazione, chiusa.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Mappa API (semplificata)</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Endpoint</th><th>Uso</th><th>Permesso</th></tr></thead>
+            <tbody>
+              <tr><td>/api/auth/login</td><td>Login admin</td><td>Pubblico</td></tr>
+              <tr><td>/api/courses</td><td>Gestione corsi</td><td>manage_courses</td></tr>
+              <tr><td>/api/masters</td><td>Gestione maestri</td><td>manage_masters</td></tr>
+              <tr><td>/api/events</td><td>Gestione eventi</td><td>manage_events</td></tr>
+              <tr><td>/api/contacts</td><td>Gestione contatti</td><td>manage_contacts</td></tr>
+              <tr><td>/api/contacts/email-list</td><td>Email list marketing</td><td>send_contact_emails</td></tr>
+              <tr><td>/api/calendar</td><td>Pianificazione</td><td>manage_calendar</td></tr>
+              <tr><td>/api/genericRequests</td><td>Ticket richieste</td><td>manage_requests</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="container">Demo pagina richiesta • URL utile: /dashboard-demo.html</div></footer>
+  </body>
+</html>

@@ -23,6 +23,7 @@ async function renderHome() {
             <h3>${m.name}</h3>
             <p><strong>${m.role}</strong></p>
             <p>${m.bio}</p>
+            <a class="btn btn-secondary" href="maestri.html#${m.id}">Vai alla scheda completa</a>
           </div>
         </article>
       `)
@@ -114,7 +115,18 @@ async function renderMastersPage() {
   const el = document.getElementById('masters-grid');
   if (!el) return;
   const masters = await apiFetch('/public/masters');
-  el.innerHTML = masters.map((m) => `<article class="card"><img src="${m.photo}" alt="${m.name}" /><div class="card-content"><h3>${m.name}</h3><p><strong>${m.role}</strong></p><p>${m.bio}</p></div></article>`).join('');
+  el.innerHTML = masters
+    .map(
+      (m) => `<article class="card" id="${m.id}"><img src="${m.photo}" alt="${m.name}" />
+      <div class="card-content">
+        <h3>${m.name}</h3>
+        <p><strong>${m.role}</strong></p>
+        <p>${m.bio}</p>
+        <p>Bio estesa (demo): docente senior con esperienza in academy, percorsi personalizzati e focus su qualità servizio, benessere animale e gestione cliente.</p>
+        <p><strong>Specializzazioni:</strong> razze complesse, protocolli low stress, ottimizzazione tempi in salone.</p>
+      </div></article>`
+    )
+    .join('');
 }
 
 async function renderEventsPage() {

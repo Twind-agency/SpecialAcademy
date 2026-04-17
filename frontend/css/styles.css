@@ -225,6 +225,13 @@ button.btn {
   overflow: hidden;
 }
 
+.tile {
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #e5ebeb;
+  padding: 18px;
+}
+
 .card img {
   width: 100%;
   height: 190px;

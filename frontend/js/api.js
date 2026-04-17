@@ -41,7 +41,7 @@ function cardCourse(c) {
         <h3>${c.title}</h3>
         <p>${c.description}</p>
         <p><strong>${c.duration}</strong> • ${c.format}</p>
-        <a class="btn" href="corso.html?id=${c.id}">Dettagli</a>
+        <a class="btn btn-primary" href="corso.html?id=${c.id}">Apri scheda completa</a>
       </div>
     </article>
   `;

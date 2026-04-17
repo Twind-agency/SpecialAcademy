@@ -58,6 +58,9 @@ python3 -m http.server 5500
 ```
 Apri: `http://localhost:5500`.
 
+### Demo struttura backend (senza login)
+- `http://localhost:5500/dashboard-demo.html` mostra una pagina esempio che spiega la struttura della dashboard di gestione e la mappa endpoint.
+
 ## Credenziali demo admin
 - `admin@specialacademy.local` / `Admin123!`
 - `manager@specialacademy.local` / `Manager123!`
